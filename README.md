@@ -205,32 +205,21 @@ cd -
 
 ### Submissions Requirements:
 
-After synchronizing with our evaluation team, thefollowing files must be included in yoursubmission to allow us successfully evaluatingyour models, for both tracks:
+After synchronizing with our evaluation team, the following files must be included in your submission to allow us to successfully evaluate models, for both tracks:
 
-- (1) The configuration and checkpoints of theoriginal HuggingFace model (able to run usingPython and Transformer),
+- (1) The configuration and checkpoints of the original HuggingFace model (able to run using python and Transformer),
 
 - (2) Code for converting the model to MLC(custom code of model network structure in"convert_weight" and "gen_config"),
 
-- (3)Converted MLC model files (model that canrun normally using the official script),
+- (3)Converted MLC model files (model that can run normally using the official script),
 
-- (4)APK file (APK file successfully compiledaccording to the official tutorial),
+- (4)APK file (APK file successfully compiled according to the official tutorial),
 
-- (5)Script to package the MLC model file into theAPK (script that can successfully package themodel onto an Android device and run it, i.e.,.bundle_weight.py).
+- (5)Script to package the MLC model file into the APK (script that can successfully package the model onto an Android device and run it, i.e.,.bundle_weight.py).
 
-- (6) lf you successfully run the APK, please take ascreenshot showing the result and upload it to thedesignated folder. lf it doesn't run successfully,you can document the reasons for the failure in anerror.txt TXT and save it in the folder. We will tryto solve it after the submission deadline.
+- (6) if you successfully run the APK, please take a screenshot showing the result and upload it to the designated folder. If it doesn't run successfully, you can document the reasons for the failure in anerror.txt TXT and save it in the folder. We will try to solve it after the submission deadline.
 
-
-Please upload all the required materials to a GitHub repository and submit the repository link to us via the [submission form](https://forms.gle/S367FfxUDcjSKz1Q9). The repository should contain:
-
-- A .txt file: It contains a shared link for downloading your model checkpoints in the huggingface format (make sure that the saved model can be downloaded via this shared link).
-
-- A .txt file: It contains a shared link for downloading the compiled model (compiled by MLC-MiniCPM) (make sure that the compiled model can be downloaded via this shared link). **The compiled model should include** the following files necessary for running on the Android platform: .apk, mlc-chat-config.json, ndarray-cache.json, params_shard_x.bin, tokenizer.json, tokenizer.model, and tokenizer_config.json.
-
-- A folder: Include the runnable source code of your method as well as a readme for usage explanation.
-
-- The (wrapped) model definition file (.py) and its configuration file which are required by opencompass for evaluating your local model. 
-
-- A CSV file: All participating teams are required to evaluate their models locally first and submit the results using a .CSV file. It should contain scores of CommonsenseQA, BIG-Bench Hard, GSM8K, HumanEval, CHID, TruthfulQA, Throughput, and GPU memory usage. Please generate .CSV file via Generate_CSV.py
+- (7) A CSV file: All participating teams are required to evaluate their models locally first and submit the results using a .CSV file. It should contain scores of CommonsenseQA, BIG-Bench Hard, GSM8K, HumanEval, CHID, TruthfulQA, Throughput, and GPU memory usage. Please generate .CSV file via Generate_CSV.py
 
 **An example of submission format can be found in Submission_Example folder**
 
