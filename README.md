@@ -136,6 +136,32 @@ python EvaluateThroughputAndMemory.py --model_name MODEL_NAME
 >
 > -- batch_size needs to be set to 1 and max_length needs to be set to 2K.
 
+> \[!TIP\]
+Our evaluation team just confirmed that they have successfully ran their LLMs on the test device, with a 9G RAM. The current test device model is the Mate 60 Pro+, which has 16GB of RAM. During actual testing, it was found that system processes occupy 7GB of RAM, leaving 9GB as the maximum available RAM.
+
+If participants make sure the actual RAM of their model is below 9GB, you are good. You can check the RAM occupied by your model from the official Python inference script of the MLC-LLM framework.
+
+
+‘’‘
+from mlc_llm import MLCEngine
+
+Create engine
+model = "HF://mlc-ai/Llama-3-8B-Instruct-q4f16_1-MLC"
+engine = MLCEngine(model)
+
+Run chat completion in OpenAI API.
+for response in engine.chat.completions.create(
+    messages=[{"role": "user", "content": "What is the meaning of life?"}],
+    model=model,
+    stream=True,
+):
+    for choice in response.choices:
+        print(choice.delta.content, end="", flush=True)
+print("\n")
+
+engine.terminate()
+’‘’
+
 ### Compile Model via MLC-MiniCPM 
 **A Step by Step instruction are presented in the following document:**
 - [Document-English](Step_by_step_instruction_MLC-miniMPC_English.pdf)
