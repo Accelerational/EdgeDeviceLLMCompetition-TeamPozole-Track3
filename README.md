@@ -135,6 +135,9 @@ python EvaluateThroughputAndMemory.py --model_name MODEL_NAME
 > \[!Note\]
 >
 > -- batch_size needs to be set to 1 and max_length needs to be set to 2K.
+>
+> Regarding the throughput score, we will adopt the average of prefill token/s and decode token/s from MLC-LLM as our score. We will measure this score with multiple prompts with various fixed lengths.
+> 
 
 > \[!Note\]
 Our evaluation team just confirmed that they have successfully ran their LLMs on the test device, with a 9G RAM. The current test device model is the Mate 60 Pro+, which has 16GB of RAM. During actual testing, it was found that system processes occupy 7GB of RAM, leaving 9GB as the maximum available RAM.
