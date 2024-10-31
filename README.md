@@ -136,7 +136,7 @@ python EvaluateThroughputAndMemory.py --model_name MODEL_NAME
 >
 > -- batch_size needs to be set to 1 and max_length needs to be set to 2K.
 >
-> Regarding the throughput score, we will adopt the average of prefill token/s and decode token/s from MLC-LLM as our score. We will measure this score with multiple prompts with various fixed lengths.
+> *** Regarding the throughput score, we will adopt the average of prefill token/s and decode token/s from MLC-LLM as our score. We will measure this score with multiple prompts with various fixed lengths.
 > 
 
 > \[!Note\]
