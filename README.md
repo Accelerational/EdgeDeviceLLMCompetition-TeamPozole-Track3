@@ -1,4 +1,4 @@
-<h2 align="center">Starting Kit for Edge-Device LLM Competition, NeurIPS 2024</h2>
+<h2 align="center">Repo of Pozole for Edge-Device LLM Competition, NeurIPS 2024</h2>
 
 This is the starting kit for the Edge-Device LLM Competition, a NeurIPS 2024 competition. To learn more about the competition, please see the [competition website](https://edge-llms-challenge.github.io/edge-llm-challenge.github.io/).  This starting kit provides instructions on downloading data, running evaluations, and generating submissions.
 
